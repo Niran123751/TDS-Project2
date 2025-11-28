@@ -1,0 +1,11 @@
+from openai import OpenAI
+import os
+
+client = OpenAI(api_key=os.getenv("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"))
+
+def ask_llm(prompt):
+    result = client.chat.completions.create(
+        model="gpt-4.1-mini",
+        messages=[{"role": "user", "content": prompt}]
+    )
+    return result.choices[0].message.content
