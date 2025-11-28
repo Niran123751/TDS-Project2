@@ -5,7 +5,7 @@ from server.solve_quiz import solve_quiz
 from loguru import logger
 
 load_dotenv()
-SECRET = os.getenv("SECRET")
+SECRET = os.getenv("NIRANJAN2025TDS")
 
 app = FastAPI()
 
